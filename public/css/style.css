@@ -70,9 +70,15 @@ body {
 }
 /* Agrega estas reglas al final de tu hoja de estilo */
 label {
-  color: #ecf5ec; /* Cambia el color a tu preferencia, por ejemplo, verde (#00ff00) */
+  color: #fffc3b
 }
 /* Agrega estas reglas al final de tu hoja de estilo */
-h2 {
+h1 {
   color: #00ff00; /* Cambia el color a tu preferencia, por ejemplo, verde (#00ff00) */
+}
+thead {
+  color: #fffc3b;
+}
+tbody{
+  color: #fffc3b;
 }
