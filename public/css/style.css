@@ -1,0 +1,78 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  max-width: 100vw!important;
+  max-height: 100vh!important;
+}
+
+.nav-icon {
+  width: 50px;
+}
+
+.primary-btn {
+  background-color: #4b3a3a;
+  color: #fff;
+}
+
+.primary-btn:hover {
+  background-color: transparent;
+  border-color: #e1e9df;
+  color: #6cc24a;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  border-color: #6cc24a;
+  color: #6cc24a;
+}
+
+.secondary-btn:hover {
+  background-color: #475c3f;
+  color: #fff;
+}
+
+.edit-btn {
+  background-color: rgb(70, 70, 55);
+  color: #000;
+}
+
+.delete-btn {
+  background-color: #aa9595;
+  color: #000;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#message-div {
+  border: 2px solid rgb(71, 60, 60);
+  background-color: #f8f9fa;
+  padding: 30px;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  background-image: url('../img/fondo.png'); /* Sube un nivel para acceder a la carpeta img */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  ;
+}
+/* Agrega estas reglas al final de tu hoja de estilo */
+label {
+  color: #ecf5ec; /* Cambia el color a tu preferencia, por ejemplo, verde (#00ff00) */
+}
+/* Agrega estas reglas al final de tu hoja de estilo */
+h2 {
+  color: #00ff00; /* Cambia el color a tu preferencia, por ejemplo, verde (#00ff00) */
+}
