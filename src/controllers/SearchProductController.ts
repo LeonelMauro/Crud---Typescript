@@ -9,9 +9,9 @@ class SearchProductController {
     const searchProductService = new SearchProductService();
 
     try {
-      const product = await searchProductService.search(search);
-      response.render("search", {
-        products: product,
+      const products = await searchProductService.search(search);
+      response.render("search-product", {
+        products :products,
         search: search
       });
     } catch (err) {

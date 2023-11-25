@@ -35,7 +35,7 @@
           </li>
         </ul>
         <form class="d-flex" action="./search-product" method="GET">
-          <input class="form-control me-2" type="search-product" placeholder="Buscar" aria-label="Buscar" name="search">
+          <input class="form-control me-2" type="search-product" placeholder="Buscar" aria-label="Buscar" name="search-product">
           <button class="btn secondary-btn" type="submit">Buscar</button>
         </form>
       </div>
@@ -44,7 +44,7 @@
   <br>
   <div class="row container centered" width="100vw">
     <div class="text-center">
-      <h2>Busca por "<%= search-product %>"</h2>
+      <h2>Busca por "<%= search %>"</h2>
     </div>
     <br>
     <br>
@@ -68,28 +68,28 @@
               <%= product.description %>
             </td>
             <td>
-              <%= product.prince %>
+              <%= product.price %>
             </td>
             <td>
-              <%= user.created_at.toLocaleDateString() %>
-                <%= user.created_at.toLocaleTimeString() %>
+              <%= product.created_at.toLocaleDateString() %>
+                <%= product.created_at.toLocaleTimeString() %>
             </td>
             <td>
-              <%= user.updated_at.toLocaleDateString() %>
-                <%= user.updated_at.toLocaleTimeString() %>
+              <%= product.updated_at.toLocaleDateString() %>
+                <%= product.updated_at.toLocaleTimeString() %>
             </td>
             <td>
               <div class="row">
                 <div class="row">
                   <form action="./edit" method="GET">
-                    <input type="hidden" name="id" value="<%= user.id %>">
+                    <input type="hidden" name="id" value="<%= product.id %>">
                     <button type="submit" class="btn edit-btn"><i class="bi bi-pencil"></i></button>
                   </form>
                 </div>
                 <div class="row"></div>
                 <div class="row">
                   <form action="./delete-user" method="POST">
-                    <input type="hidden" name="id" value="<%= user.id %>">
+                    <input type="hidden" name="id" value="<%= product.id %>">
                     <button type="submit" class="btn delete-btn"><i class="bi bi-trash"></i></button>
                   </form>
                 </div>

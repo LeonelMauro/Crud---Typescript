@@ -11,8 +11,8 @@ import { CreateProductController } from "./controllers/CreateProductController"
 
 const router = Router();
 
-const createProductController = new CreateProductController
-const searchProductService = new SearchProductController ();
+const createProductController = new CreateProductController ();
+const searchProductController = new SearchProductController ();
 const listProducController = new ListProductController();
 const createUserController = new CreateUserController();
 const searchUserController = new SearchUserController();
@@ -42,7 +42,7 @@ router.post("/add-product", createProductController.handle);
 
 router.get("/search", searchUserController.handle);
 
-router.get("/search-product", searchProductService.handle);
+router.get("/search-product", searchProductController.handle);
 
 router.get("/edit", getUserDataController.handle);
 
