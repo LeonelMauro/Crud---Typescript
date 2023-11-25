@@ -76,6 +76,7 @@ label {
 }
 /* Agrega estas reglas al final de tu hoja de estilo */
 h1 {
+  font-size: 2cm; /* Ajusta el tamaño según tus necesidades */
   color: #00ff00; /* Cambia el color a tu preferencia, por ejemplo, verde (#00ff00) */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.884); /* Ajusta el sombreado según tus necesidades */
 
@@ -93,6 +94,6 @@ tbody{
 /* style.css */
 th {
   font-size: 20px; /* Ajusta el tamaño según tus necesidades */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.884); /* Ajusta el sombreado según tus necesidades */
+  text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.884); /* Ajusta el sombreado según tus necesidades */
 
 }
