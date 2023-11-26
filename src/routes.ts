@@ -9,9 +9,11 @@ import{ ListProductController } from "./controllers/ListProducController";
 import { SearchProductController } from "./controllers/SearchProductController"
 import { CreateProductController } from "./controllers/CreateProductController"
 import { DeleteProductController } from "./controllers/DeleteProductController"
+import { GetProductController } from "./controllers/GetProductController"
 
 const router = Router();
 
+const getProductController = new GetProductController ();
 const deleteProductController = new DeleteProductController ();
 const createProductController = new CreateProductController ();
 const searchProductController = new SearchProductController ();
@@ -47,6 +49,8 @@ router.get("/search", searchUserController.handle);
 router.get("/search-product", searchProductController.handle);
 
 router.get("/edit", getUserDataController.handle);
+
+router.get("/edit-product", getProductController.handle);
 
 router.post("/edit-user", updateUserController.handle);
 
