@@ -3,13 +3,13 @@ import { DeleteProductService } from "../services/DeleteProductService";
 
 class DeleteProductController {
     async handle (request : Request , response: Response){
-        const id = request.body;
+        const {id} = request.body;
         const deleteProductService = new DeleteProductService ();
         
         try {
             await deleteProductService.delete(id).then(() => {
               response.render("message", {
-                message: "Usuário deletado com sucesso"
+                message: "Usuário eliminado"
               });
             });
           } catch (err) {

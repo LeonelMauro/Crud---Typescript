@@ -8,9 +8,11 @@ import { UpdateUserController } from "./controllers/UpdateUserController";
 import{ ListProductController } from "./controllers/ListProducController";
 import { SearchProductController } from "./controllers/SearchProductController"
 import { CreateProductController } from "./controllers/CreateProductController"
+import { DeleteProductController } from "./controllers/DeleteProductController"
 
 const router = Router();
 
+const deleteProductController = new DeleteProductController ();
 const createProductController = new CreateProductController ();
 const searchProductController = new SearchProductController ();
 const listProducController = new ListProductController();
@@ -49,6 +51,8 @@ router.get("/edit", getUserDataController.handle);
 router.post("/edit-user", updateUserController.handle);
 
 router.post("/delete-user", deleteUserController.handle);
+
+router.post("/delete-product", deleteProductController.handle);
 
 
 router.get("/product", listUsersController.handle);
