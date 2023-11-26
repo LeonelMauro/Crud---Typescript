@@ -9,12 +9,12 @@ class DeleteProductController {
         try {
             await deleteProductService.delete(id).then(() => {
               response.render("message", {
-                message: "Usuário eliminado"
+                message: "Producto eliminado"
               });
             });
           } catch (err) {
             response.render("message", {
-              message: `Erro ao deletar usuário: ${err.message}`
+              message: `Error al borrar el producto: ${err.message}`
             });
           }
         }

@@ -15,12 +15,12 @@ class CreateProductController {
         
       }).then(() => {
         response.render("message", {
-          message: "Usuário cadastrado com sucesso"
+          message: "Producto creado correctamente"
         });
       });
     } catch (err) {
       response.render("message", {
-        message: `Erro ao cadastrar usuário: ${err.message}`
+        message: `Error al crear producto: ${err.message}`
       });
     }
 
