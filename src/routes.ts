@@ -6,13 +6,15 @@ import { ListUsersController } from "./controllers/ListUsersController";
 import { SearchUserController } from "./controllers/SearchUserController";
 import { UpdateUserController } from "./controllers/UpdateUserController";
 import{ ListProductController } from "./controllers/ListProducController";
-import { SearchProductController } from "./controllers/SearchProductController"
-import { CreateProductController } from "./controllers/CreateProductController"
-import { DeleteProductController } from "./controllers/DeleteProductController"
-import { GetProductController } from "./controllers/GetProductController"
+import { SearchProductController } from "./controllers/SearchProductController";
+import { CreateProductController } from "./controllers/CreateProductController";
+import { DeleteProductController } from "./controllers/DeleteProductController";
+import { GetProductController } from "./controllers/GetProductController";
+import { UpdateProductController } from "./controllers/UpdateProductController"
 
 const router = Router();
 
+const updateProductController = new UpdateProductController();
 const getProductController = new GetProductController ();
 const deleteProductController = new DeleteProductController ();
 const createProductController = new CreateProductController ();
@@ -53,6 +55,8 @@ router.get("/edit", getUserDataController.handle);
 router.get("/edit-product", getProductController.handle);
 
 router.post("/edit-user", updateUserController.handle);
+
+router.post("/edit-pro", updateProductController.handle);
 
 router.post("/delete-user", deleteUserController.handle);
 
