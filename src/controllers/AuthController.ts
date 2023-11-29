@@ -10,9 +10,13 @@ class AuthController {
     const authService = new AuthService();  
     try {  
       const user = await authService.authenticate(email,username);
+      res.render("message", {
+        message: "Inicio de Sesión OK.!",
+      });
+
 
       res.redirect("/");
-      res.status(200).json({ message: "Inicio de sesión exitoso", user });
+      
     } catch (error) {
       res.status(401).json({ error: error.message });
     }
