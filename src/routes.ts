@@ -10,10 +10,13 @@ import { SearchProductController } from "./controllers/SearchProductController";
 import { CreateProductController } from "./controllers/CreateProductController";
 import { DeleteProductController } from "./controllers/DeleteProductController";
 import { GetProductController } from "./controllers/GetProductController";
-import { UpdateProductController } from "./controllers/UpdateProductController"
+import { UpdateProductController } from "./controllers/UpdateProductController";
+import { AuthController } from "./controllers/AuthController";
+
 
 const router = Router();
 
+const  authController = new AuthController ();
 const updateProductController = new UpdateProductController();
 const getProductController = new GetProductController ();
 const deleteProductController = new DeleteProductController ();
@@ -26,6 +29,12 @@ const updateUserController = new UpdateUserController();
 const deleteUserController = new DeleteUserController();
 const listUsersController = new ListUsersController();
 const getUserDataController = new GetUserDataController();
+
+router.get("/login", (req, res) => {
+  res.render("login");
+});
+
+router.post("/login", authController.login);
 
 router.get("/", listUsersController.handle);
 

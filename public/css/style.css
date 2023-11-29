@@ -70,25 +70,27 @@ body {
 }
 /* Agrega estas reglas al final de tu hoja de estilo */
 label {
+  font-size: 20px; /* Ajusta el tamaño según tus necesidades */
   color: #fffc3b;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.884); /* Ajusta el sombreado según tus necesidades */
+  text-shadow: 4px 12px 2px rgba(0, 0, 0, 0.884); /* Ajusta el sombreado según tus necesidades */
 
 }
 /* Agrega estas reglas al final de tu hoja de estilo */
 h1 {
   font-size: 2cm; /* Ajusta el tamaño según tus necesidades */
   color: #00ff00; /* Cambia el color a tu preferencia, por ejemplo, verde (#00ff00) */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.884); /* Ajusta el sombreado según tus necesidades */
+  text-shadow: 4px 12px 2px rgba(0, 0, 0, 0.884);  /* Ajusta el sombreado según tus necesidades */
 
 }
 thead {
   color: #fffc3b;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.884); /* Ajusta el sombreado según tus necesidades */
+  text-shadow: 4px 12px 2px rgba(0, 0, 0, 0.884);  /* Ajusta el sombreado según tus necesidades */
 
 }
 tbody{
   color: #fffc3b;
   font-size: 18px; /* Ajusta el tamaño según tus necesidades */
+  text-shadow: 4px 12px 2px rgba(0, 0, 0, 0.884);  /* Ajusta el sombreado según tus necesidades */
 
 }
 /* style.css */
