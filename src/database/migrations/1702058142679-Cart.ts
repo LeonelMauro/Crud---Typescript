@@ -1,6 +1,7 @@
+
 import { MigrationInterface, QueryRunner, Table, TableForeignKey } from "typeorm";
 
-export class CreateCartItemsTable1702009082994 implements MigrationInterface {
+export class Cart1702058142679 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(new Table({
@@ -15,11 +16,11 @@ export class CreateCartItemsTable1702009082994 implements MigrationInterface {
                 },
                 {
                     name: "product_id",
-                    type: "uuid"
+                    type: "uuid",
                 },
                 {
                     name: "quantity",
-                    type: "int"
+                    type: "integer",
                 },
                 {
                     name: "created_at",
@@ -32,9 +33,8 @@ export class CreateCartItemsTable1702009082994 implements MigrationInterface {
                     default: "now()"
                 }
             ]
-        }), true);
+        }));
 
-        // Añadir clave foránea para relacionar cart_items con products
         await queryRunner.createForeignKey("cart_items", new TableForeignKey({
             columnNames: ["product_id"],
             referencedColumnNames: ["id"],
@@ -44,8 +44,12 @@ export class CreateCartItemsTable1702009082994 implements MigrationInterface {
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
-        // Deshacer lo que hiciste en el método up
+        const table = await queryRunner.getTable("cart_items");
+        const foreignKey = table.foreignKeys.find(fk => fk.columnNames.indexOf("product_id") !== -1);
+        if (foreignKey) {
+            await queryRunner.dropForeignKey("cart_items", foreignKey);
+        }
+
         await queryRunner.dropTable("cart_items");
     }
-
 }

@@ -12,11 +12,14 @@ import { DeleteProductController } from "./controllers/DeleteProductController";
 import { GetProductController } from "./controllers/GetProductController";
 import { UpdateProductController } from "./controllers/UpdateProductController";
 import { AuthController } from "./controllers/AuthController";
+import { CartController } from "./controllers/CartController";
+
 
 
 const router = Router();
 
-const  authController = new AuthController ();
+const cartController = new CartController();
+const authController = new AuthController ();
 const updateProductController = new UpdateProductController();
 const getProductController = new GetProductController ();
 const deleteProductController = new DeleteProductController ();
@@ -33,6 +36,14 @@ const getUserDataController = new GetUserDataController();
 router.get("/", (req, res) => {
   res.render("login");
 });
+
+router.post("/add-to-cart", async (req, res) => {
+  await cartController.addToCart(req, res);
+});
+
+
+router.post("/add-to-cart", cartController.addToCart);
+
 
 router.post("/login", authController.login);
 

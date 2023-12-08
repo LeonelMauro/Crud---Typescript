@@ -38,6 +38,9 @@
           <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" name="search">
           <button class="btn secondary-btn" type="submit">Buscar</button>
         </form>
+        <form class="d-flex" action="./carrito" method="GET">
+          <button class="btn secondary-btn" type="submit"><i class=>🛒</i></button>
+        </form>
       </div>
     </div>
   </nav>
@@ -91,6 +94,13 @@
                   <form action="./delete-product" method="POST">
                     <input type="hidden" name="id" value="<%= product.id %>">
                     <button type="submit" class="btn btn-dark"><i class="bi bi-trash"></i></button>
+                  </form>
+                </div>
+                <div>
+                  <form action="/add-to-cart" method="POST">
+                    <input type="hidden" name="productId" value="<%= product.id %>">
+                    <input type="hidden" name="quantity" value="1"> <!-- Puedes cambiar la cantidad según tus necesidades -->
+                    <button type="submit" class="btn btn-success"><i class="bi bi-cart-plus"></i> Agregar al carrito</button>
                   </form>
                 </div>
               </div>
