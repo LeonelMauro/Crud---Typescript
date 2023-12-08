@@ -30,13 +30,13 @@ const deleteUserController = new DeleteUserController();
 const listUsersController = new ListUsersController();
 const getUserDataController = new GetUserDataController();
 
-router.get("/login", (req, res) => {
+router.get("/", (req, res) => {
   res.render("login");
 });
 
 router.post("/login", authController.login);
 
-router.get("/", listUsersController.handle);
+router.get("/lista", listUsersController.handle);
 
 router.get("/products", listProducController.handle);
 

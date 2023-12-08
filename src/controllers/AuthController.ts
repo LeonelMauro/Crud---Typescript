@@ -15,7 +15,7 @@ class AuthController {
       });
 
 
-      res.redirect("/");
+      res.redirect("/lista");
       
     } catch (error) {
       res.status(401).json({ error: error.message });

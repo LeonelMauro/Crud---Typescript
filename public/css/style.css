@@ -1,7 +1,11 @@
 body {
   font-family: 'Open Sans', sans-serif;
-  max-width: 100vw!important;
-  max-height: 100vh!important;
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  background-image: url('../img/fondo.png'); /* Sube un nivel para acceder a la carpeta img */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .nav-icon {
@@ -58,44 +62,26 @@ body {
   background-color: #f8f9fa;
   padding: 30px;
 }
-body {
-  font-family: 'Open Sans', sans-serif;
-  max-width: 100vw !important;
-  max-height: 100vh !important;
-  background-image: url('../img/fondo.png'); /* Sube un nivel para acceder a la carpeta img */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  ;
-}
-/* Agrega estas reglas al final de tu hoja de estilo */
+
 label {
-  font-size: 20px; /* Ajusta el tamaño según tus necesidades */
+  font-size: 20px;
   color: #fffc3b;
-  text-shadow: 4px 12px 2px rgba(0, 0, 0, 0.884); /* Ajusta el sombreado según tus necesidades */
-
+  text-shadow: 4px 12px 2px rgba(0, 0, 0, 0.884);
 }
-/* Agrega estas reglas al final de tu hoja de estilo */
+
 h1 {
-  font-size: 2cm; /* Ajusta el tamaño según tus necesidades */
-  color: #00ff00; /* Cambia el color a tu preferencia, por ejemplo, verde (#00ff00) */
-  text-shadow: 4px 12px 2px rgba(0, 0, 0, 0.884);  /* Ajusta el sombreado según tus necesidades */
-
+  font-size: 1cm;
+  color: #00ff00;
+  text-shadow: 4px 12px 2px rgba(0, 0, 0, 0.884);
 }
-thead {
+
+thead,
+tbody {
   color: #fffc3b;
-  text-shadow: 4px 12px 2px rgba(0, 0, 0, 0.884);  /* Ajusta el sombreado según tus necesidades */
-
+  text-shadow: 4px 12px 2px rgba(0, 0, 0, 0.884);
 }
-tbody{
-  color: #fffc3b;
-  font-size: 18px; /* Ajusta el tamaño según tus necesidades */
-  text-shadow: 4px 12px 2px rgba(0, 0, 0, 0.884);  /* Ajusta el sombreado según tus necesidades */
 
-}
-/* style.css */
 th {
-  font-size: 20px; /* Ajusta el tamaño según tus necesidades */
-  text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.884); /* Ajusta el sombreado según tus necesidades */
-
+  font-size: 20px;
+  text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.884);
 }

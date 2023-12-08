@@ -7,34 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="css/style.css">
-
+    <!-- Agrega el enlace al archivo de estilo de Bootstrap si no lo has hecho -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   
 </head>
 <body>
     <h1>Login</h1>
 
     <form method="POST" action="/login">
+        <!-- Campos de inicio de sesión -->
         <div>
-          <label for="email">Nombre de Usuario:</label>
-          <input type="username" id="username" name="username" required>
-
+            <label for="username">Nombre de Usuario:</label>
+            <input type="text" id="username" name="username" required>
         </div>
         <div>
-          <label for="email">Correo Electrónico:</label>
-          <input type="email" id="email" name="email" required>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
         </div>
-        
 
         <!-- Agrega más campos según sea necesario, por ejemplo, para la contraseña -->
 
-        <button type="submit">Iniciar Sesión</button>
+        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
     </form>
-    <div class="col-6">
-        <div class="float-end">
-          <a href="./" class="btn primary-btn">Volver à home</a>
-        </div>
-      </div>
-      <div>
-        <a href="/add">Registrate</a>
-      </div>
+
+    <!-- Botón de registro centrado con el mismo estilo -->
+    <div class="col-6 text-center">
+        <a href="/add" class="btn btn-primary">Regístrate</a>
+    </div>
+
+    <!-- Puedes agregar más contenido o estilos según sea necesario -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
