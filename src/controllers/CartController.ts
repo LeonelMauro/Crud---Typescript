@@ -26,7 +26,13 @@ class CartController {
     cartItem.quantity += quantity;
     await cartItemRepository.save(cartItem);
 
-    return res.json({ message: "Product added to cart successfully" });
+    res.render("message", {
+      message: "Agragado al carro.!",
+    });
+
+
+    res.redirect("/products");
+
   }
 
 }
