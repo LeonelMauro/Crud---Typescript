@@ -13,11 +13,13 @@ import { GetProductController } from "./controllers/GetProductController";
 import { UpdateProductController } from "./controllers/UpdateProductController";
 import { AuthController } from "./controllers/AuthController";
 import { CartController } from "./controllers/CartController";
+import { ListCartController } from "./controllers/ListCartController";
 
 
 
 const router = Router();
 
+const listCartController = new ListCartController();
 const cartController = new CartController();
 const authController = new AuthController ();
 const updateProductController = new UpdateProductController();
@@ -41,6 +43,7 @@ router.post("/add-to-cart", async (req, res) => {
   await cartController.addToCart(req, res);
 });
 
+router.get ("/carrito",listCartController.handle);
 
 router.post("/add-to-cart", cartController.addToCart);
 
