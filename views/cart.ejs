@@ -67,10 +67,18 @@
                 </td>
                 <td>
                   <%= cart.product.price %>
-              </td>
+                </td>
                 <td>
                     <%= cart.quantity %>
-                </td>        
+                </td>
+                <td>
+                  <div class="row">
+                    <form action="./" method="POST">
+                      <input type="hidden" name="id" value="<%= cart.id %>">
+                      <button type="submit" class="btn btn-dark"><i class="bi bi-trash"></i></button>
+                    </form>
+                  </div>
+                </td>             
             </tr>
           <% }) %>
       </tbody>
@@ -78,9 +86,6 @@
     <br>
     <br>
     
-    <div class="float-start">
-      <a href="./addProduct" class="btn btn-primary">Adicionar Producto</a>
-    </div>
     <div class="col-6">
       <div class="float-end">
         <a href="./lista" class="btn primary-btn">Volver à home</a>
