@@ -7,7 +7,7 @@ class CartItem {
   @PrimaryGeneratedColumn("uuid")
   id: string;
 
-  @ManyToOne(() => Product, { eager: true })
+  @ManyToOne(() => Product, { eager: true, onDelete: "CASCADE" })
   @JoinColumn({ name: "product_id" })
   product: Product;
 

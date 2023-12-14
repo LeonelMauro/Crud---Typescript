@@ -14,11 +14,12 @@ import { UpdateProductController } from "./controllers/UpdateProductController";
 import { AuthController } from "./controllers/AuthController";
 import { CartController } from "./controllers/CartController";
 import { ListCartController } from "./controllers/ListCartController";
-
+import { DeleteCartController} from "./controllers/DeleteCartController";
 
 
 const router = Router();
 
+const deleteCartController =new DeleteCartController();
 const listCartController = new ListCartController();
 const cartController = new CartController();
 const authController = new AuthController ();
@@ -34,6 +35,8 @@ const updateUserController = new UpdateUserController();
 const deleteUserController = new DeleteUserController();
 const listUsersController = new ListUsersController();
 const getUserDataController = new GetUserDataController();
+
+router.post("/delete-cart", deleteCartController.handle);
 
 router.get("/", (req, res) => {
   res.render("login");
