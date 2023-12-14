@@ -10,7 +10,7 @@ class DeleteCartService{
         .createQueryBuilder ()
         .delete ()
         .from(CartItem)
-        .where (" id =: id",{id})
+        .where ("product_id =: id",{id})
         .execute ();
 
     return cart

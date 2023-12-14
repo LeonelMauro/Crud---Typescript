@@ -4,10 +4,10 @@ import {DeleteCartService} from "../services/DeleteCartService"
 class DeleteCartController {
     async handle (request : Request , response : Response){
         const { id } = request.body;
-        const deleteCartService = new DeleteCartService ();
+        const deleteCartController = new DeleteCartService ();
 
         try{
-            await deleteCartService.delete(id).then(()=>{
+            await deleteCartController.delete(id).then(()=>{
                 response.render("message",{
                         message : "Producto elimida del Carro"
             });
